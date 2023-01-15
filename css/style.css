@@ -67,6 +67,7 @@ body{
 .header{
   position: relative;
   background: rgba(255, 143, 14, 0.1);
+  padding: 2rem auto;
 }
 
 
@@ -126,14 +127,15 @@ body{
  }
 
 .banner-img{
-  height: 60vh;
+  width: 75%;
+  margin: 0 auto;
   overflow: hidden;
  }
 
 .banner-img img{
   display: block;
-  height: 100%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 2rem auto;
  }
 
 
@@ -241,6 +243,7 @@ body{
   font-size: 1.4rem;
   padding: 1rem;
   border: none;
+  z-index: 4;
   border-radius: 5px;
   position: absolute;
   left: -5%;
@@ -294,7 +297,7 @@ body{
 
 
 /* ----------------------------
-contact section (bonus 
+contact section (bonus) style
 ----------------------------*/
 .contact{
   background: linear-gradient(rgba(0, 0, 0, 0.466), rgb(148, 148, 148)), url(../images/contatct-bg.jpg) ;
@@ -348,7 +351,7 @@ contact section (bonus
 }
 
 /* ----------------------------
-    sponsore section 
+    sponsore section style
   ----------------------------*/
 
 
@@ -370,7 +373,7 @@ contact section (bonus
 
 
 /* ----------------------------
-    footer section
+    footer section style
   ----------------------------*/
 
 .footer{
@@ -604,7 +607,7 @@ contact section (bonus
 
 
 /* ------------------------- 
-      desktop responsive 
+      large screen responsive 
 ------------------------- */
 
 @media  screen and (min-width:769px) and (max-width:1280px) {
@@ -632,10 +635,7 @@ contact section (bonus
     width: 100%;
   }
 
-  
-
   .sponsor_box{
     flex-wrap: wrap;
   }
-
 }
