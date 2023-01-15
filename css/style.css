@@ -18,15 +18,16 @@
 
 body{
   font-family: 'Work Sans', sans-serif;
-  /* overflow: hidden; */
 }
 
-/* common styles */
+/* -----------------
+    common styles 
+ ----------------- */
+
 .container{
   width: 75%;
   margin: 10rem auto;
 }
-
 
 .btn{
   padding: 1.2rem;
@@ -51,23 +52,25 @@ body{
   margin: 1rem auto;
  }
 
- .details{
-  margin: 1rem;
+.details{
+  margin: 2rem auto;
   font-size: 1rem;
   color: var(--dark-02);
 }
 
+
+
 /* ----------------------
     header style
  ----------------------  */
+
 .header{
-  height: 100vh;
   position: relative;
   background: rgba(255, 143, 14, 0.1);
 }
 
 
- .nav-bar{
+.nav-bar{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,38 +78,34 @@ body{
   padding: 1rem 0;
   margin: 0 auto;
   position: relative;
- }
+}
 
- .logo{
+.logo{
   font-size: 2rem;
   color: var(--dark-01);
   font-weight: 600;
   text-transform: capitalize;
- }
+}
 
- .nav-list{
+.nav-list{
   list-style: none;
   display: flex;
   flex-direction: row;
   column-gap: 1.5rem;
- }
+}
 
- .nav-items{
-  display: inline-block;
- }
-
- .nav-link{
+.nav-link{
   text-decoration: none;
   color: var(--dark-02);
   font-size: 1.2rem;
-  font-weight: 500;
+ font-weight: 500;
  }
 
- .nav-link:hover{
+.nav-link:hover{
   color: var(--dark-01);
- }
+}
 
-
+/* toggle style  */
 .toggle{
   display: none;
   font-size: 2rem;
@@ -119,18 +118,19 @@ body{
 }
 
 
- .banner-text{
+
+.banner-text{
   text-align: center;
   width: 40%;
   margin: 1rem auto; 
  }
 
- .banner-img{
+.banner-img{
   height: 60vh;
   overflow: hidden;
  }
 
- .banner-img img{
+.banner-img img{
   display: block;
   height: 100%;
   margin: 0 auto;
@@ -139,27 +139,30 @@ body{
 
  /* banner text */
 
- .banner-heading{
+.banner-heading{
   font-size: 3rem;
   font-weight: 700;
  }
 
- .details{
+.details{
   font-size: 1rem;
   font-weight: 400;
   margin: .5rem auto;
- }
-
- /* Quick section */
+}
 
 
- .section-quick{
+ /* ----------------------
+    Quick section style
+ ----------------------  */
+
+
+.section-quick{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   column-gap: 5rem;
- }
+}
 
  .thin-heading{
   font-weight: 500;
@@ -177,20 +180,17 @@ body{
   width: 50%;
  }
 
- .quick-text{
-  width: 50%;
- }
-
  .quick-img img{
   width: 100%;
  }
 
+ .quick-text{
+  width: 50%;
+ }
 
-
-
-/* ----------------------
-    love and enjoy features section   
- ----------------------  */
+/* ----------------------------------
+    love and enjoy feature section   
+ ----------------------------------  */
 
 .section-love{
   margin: 5rem auto;
@@ -202,8 +202,8 @@ body{
 }
 
 .love-text{
- width: 60%;
- padding: 1rem;
+  width: 50%;
+  padding: 1rem;
 }
 
 
@@ -215,7 +215,7 @@ body{
 }
 
 .card{
-  padding: 1.5rem;
+  padding: 1.5rem .5rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
   margin: .5rem auto;
   border-radius: 5px;
@@ -234,7 +234,6 @@ body{
   width: 100%;
   overflow: hidden;
 }
-
 
 .toast{
   background: var(--color-primary);
@@ -257,9 +256,9 @@ body{
 
 
 
-/* 
-    info box style
-*/
+/* ----------------------------
+    facts section style
+----------------------------*/
 .section-fact{
   width: 65%;
 }
@@ -269,31 +268,34 @@ body{
   flex-direction: row;
   justify-content: space-evenly;
   margin: 2rem auto;
-
 }
+
 .info-card{
-  width: 20%;
+  width: 22%;
   text-align: center;
   padding: 1rem;
   border: 1px solid var(--color-primary);
   border-radius: 5px;
 }
+
 .info-count{
   margin: 1rem;
 }
+
 .info-details{
   font-size: 1rem;
   font-weight: 500;
 }
 
 .info-card:hover .info-icon{
-  transition: .3s;
+  transition: .3s ease;
   transform: scale(1.2) rotate(360deg);
 }
 
 
-/* contact section (bonus */
-
+/* ----------------------------
+contact section (bonus 
+----------------------------*/
 .contact{
   background: linear-gradient(rgba(0, 0, 0, 0.466), rgb(148, 148, 148)), url(../images/contatct-bg.jpg) ;
   background-position: center;
@@ -345,7 +347,9 @@ body{
   margin: 1rem auto;
 }
 
-/* sponsore section */
+/* ----------------------------
+    sponsore section 
+  ----------------------------*/
 
 
 .section_sponsor{
@@ -365,15 +369,18 @@ body{
 
 
 
-/* footer */
+/* ----------------------------
+    footer section
+  ----------------------------*/
 
 .footer{
   background: #FFF4E7;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 5px;
+  font-size: 1.2rem;
+  color: var(--dark-02);
 }
-
 
 
 /* ------------------------- 
@@ -523,7 +530,7 @@ body{
       tablet responsive 
 ------------------------- */
 
-@media  screen and (min-width:577px) and (max-width:769px) {
+@media  screen and (min-width:577px) and (max-width:768px) {
   html{
     font-size: 70%;
   }
@@ -541,7 +548,7 @@ body{
   }
 
   .header{
-    height: 70vh;
+    height: 80vh;
   }
   .nav-bar, .banner{
     width: 80%;
@@ -602,7 +609,7 @@ body{
 
 @media  screen and (min-width:769px) and (max-width:1280px) {
   .header{
-    height: 90vh;
+    height: 100vh;
   }
   .nav-bar, .banner{
     width: 80%;
