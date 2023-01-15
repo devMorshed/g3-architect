@@ -48,6 +48,7 @@ body{
 .section-heading{
   font-size: 3rem;
   font-weight: 700;
+  margin: 1rem auto;
  }
 
 /* ----------------------
@@ -257,6 +258,62 @@ body{
 }
 
 
+/* contact section (bonus */
+
+.contact{
+  background: linear-gradient(rgba(0, 0, 0, 0.466), rgb(148, 148, 148)), url(../images/contatct-bg.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.contact-form{
+  padding: 2rem;
+}
+
+.contact-form .section-heading{
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+
+}
+
+.form-row{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.form-row input{
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin: .5rem;
+  font-size: 1rem;
+}
+
+.form-row textarea{
+  font-family: 'Work Sans', sans-serif;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin: .5rem;
+  font-size: 1rem;
+}
+
+.btn-send{
+  display: block;
+  margin: 1rem auto;
+}
+
+/* sponsore section */
+
+
 .section_sponsor{
   text-align: center;
 }
@@ -281,4 +338,12 @@ body{
   text-align: center;
   padding: 1rem;
   border-radius: 5px;
+}
+
+
+
+@media  screen and (max-width:768px) {
+  .form-row{
+    display: block;
+  }
 }
