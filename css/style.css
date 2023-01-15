@@ -23,8 +23,8 @@ body{
 
 /* common styles */
 .container{
-  width: 65%;
-  margin: 5rem auto;
+  width: 75%;
+  margin: 10rem auto;
 }
 
 
@@ -51,6 +51,12 @@ body{
   margin: 1rem auto;
  }
 
+ .details{
+  margin: 1rem;
+  font-size: 1rem;
+  color: var(--dark-02);
+}
+
 /* ----------------------
     header style
  ----------------------  */
@@ -66,8 +72,9 @@ body{
   justify-content: space-between;
   align-items: center;
   width: 65%;
-  padding: .5rem 0;
+  padding: 1rem 0;
   margin: 0 auto;
+  position: relative;
  }
 
  .logo{
@@ -80,6 +87,7 @@ body{
  .nav-list{
   list-style: none;
   display: flex;
+  flex-direction: row;
   column-gap: 1.5rem;
  }
 
@@ -126,6 +134,7 @@ body{
 
  .section-quick{
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   column-gap: 5rem;
@@ -144,6 +153,15 @@ body{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  width: 50%;
+ }
+
+ .quick-text{
+  width: 50%;
+ }
+
+ .quick-img img{
+  width: 100%;
  }
 
 
@@ -163,9 +181,10 @@ body{
 }
 
 .love-text{
- width: 50%;
+ width: 60%;
  padding: 1rem;
 }
+
 
 .section-love .section-heading{
   border: none;
@@ -192,7 +211,7 @@ body{
 
 .love-imgbox img{
   width: 100%;
-  height: auto;
+  overflow: hidden;
 }
 
 
@@ -335,6 +354,11 @@ body{
 }
 
 
+
+/* ------------------------- 
+      mobile responsive 
+------------------------- */
+
 @media screen and (max-width: 576px){
 
   html{
@@ -345,9 +369,15 @@ body{
     width: 90%;
     overflow: hidden;
   }
+
   .section-heading{
     text-align: center;
   }
+
+  .details{
+    margin: 1.5rem;
+  }
+
 
   .header{
     height: 50vh;
@@ -356,7 +386,6 @@ body{
   .nav-bar, .banner{
     width: 80%;
   }
-
 
   .banner{
     position: absolute;
@@ -375,13 +404,15 @@ body{
   .banner-img img{
     width: 100%;
   }
-  
-
 
   .section-quick, .section-love{
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+  }
+
+  .love-text, .love-imgbox, .quick-imgbox, .quick-text{
+    width: 90%;
   }
 
   .quick-imgbox{
@@ -400,51 +431,131 @@ body{
   margin: 3rem auto;
   }
 
-.info-box{
-  display: block;
-}
-.info-card{
-  width: 80%;
-  margin: 1rem auto;
-}
-
+  .info-box{
+    display: block;
+  }
+  .info-card{
+    width: 80%;
+    margin: 1rem auto;
+  }
 
   .form-row{
     display: block;
   }
 
+  .sponsor_box{
+  flex-wrap: wrap;
+  } 
+}
+
+
+/* ------------------------- 
+      tablet responsive 
+------------------------- */
+
+@media  screen and (min-width:577px) and (max-width:769px) {
+  html{
+    font-size: 70%;
+  }
+
+  .container{
+    width: 80%;
+  }
+
+  .section-heading{
+    text-align: center;
+  }
+
+  .details{
+    margin: 2rem;
+  }
+
+  .header{
+    height: 70vh;
+  }
+  .nav-bar, .banner{
+    width: 80%;
+  }
+
+  .banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+  }
+  .banner-text{
+    width: 100%;
+  }
+
+  .banner-img{
+    height: 100%;
+  }
+
+  .banner-img img{
+    width: 100%;
+  }
+
+  .section-quick, .section-love{
+    flex-wrap: wrap;
+    row-gap: 5rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .love-text, .love-imgbox, .quick-imgbox, .quick-text{
+    width: 100%;
+  }
+
+  .section-love{
+    margin-bottom: 10rem;
+  }
+
+  .section-fact .info-box{
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+
+  .info-card{
+    width: 40%;
+  }
+
+  .sponsor_box{
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  } 
+}
 
 
 
-   .sponsor_box{
+@media  screen and (min-width:769px) and (max-width:1280px) {
+  .header{
+    height: 90vh;
+  }
+  .nav-bar, .banner{
+    width: 80%;
+  }
+  .banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+  }
+  .banner-text{
+    width: 100%;
+  }
+
+  .banner-img{
+    height: 100%;
+  }
+
+  .banner-img img{
+    width: 100%;
+  }
+
+  
+
+  .sponsor_box{
     flex-wrap: wrap;
   }
-  
-}
 
-
-
-
-
-
-
-
-
-
-
-
-@media  screen and (min-width:577px) and (max-width:768px) {
-  .form-row{
-    display: block;
-  }
-  body{
-    background: rgba(45, 155, 63, 0.356);
-  }
-}
-
-@media  screen and (min-width:769px) and (max-width:1200px) {
-  
-  body{
-    background: rgba(68, 20, 112, 0.295);
-  }
 }
