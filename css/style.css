@@ -18,21 +18,25 @@
 
 body{
   font-family: 'Work Sans', sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* common styles */
+.container{
+  margin: 1rem auto;
+}
+
 
 .btn{
   padding: 1.2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: white;
   background: var(--color-primary);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   transition: .3s ease;
 }
 
@@ -52,9 +56,9 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
-  padding: 1rem 0;
-  margin: 0 auto;
+  width: 65%;
+  padding: .5rem 0;
+  margin-top: 0;
  }
 
  .logo{
@@ -83,13 +87,11 @@ body{
   /* background: #13131305; */
   text-align: center;
   width: 50%;
-  margin: 1rem auto;
   
  }
  .banner-img{
   height: 60vh;
-  padding: 1rem auto;
-  /* background: #8a8484; */
+  overflow: hidden;
  }
 
  .banner-img img{
@@ -106,8 +108,110 @@ body{
   font-weight: 700;
  }
 
- .section-details{
+ .details{
   font-size: 1rem;
   font-weight: 400;
-  margin: 1rem auto;
+  margin: .5rem auto;
  }
+
+ /* Quick section */
+
+
+ .section-quick{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  margin: 8rem auto;
+  column-gap: 5rem
+ }
+
+ .section-heading{
+  font-size: 3rem;
+  font-weight: 700;
+ }
+
+ .thin-heading{
+  font-weight: 500;
+  color: var(--dark-03);
+ }
+
+ .color-heading{
+  color: var(--color-primary);
+ }
+
+ .quick-imgbox{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+ }
+
+
+ /* love and enjoy features section   */
+
+.section-love{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5rem;
+  width: 65%;
+  margin: 8rem auto;
+}
+
+.section-love .section-heading{
+  border: none;
+  border-left: 5px solid var(--color-primary);
+  padding: 0rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.love-text{
+  width: 50%;
+}
+.love-imgbox{
+  width: 50%;
+}
+
+.card{
+  padding: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  margin: 1rem auto;
+  border-radius: 5px;
+
+}
+
+.card-heading{
+  font-size: 1.2rem;
+}
+
+.card .details{
+  text-overflow: ellipsi;
+}
+
+.love-imgbox{
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.love-img{
+  width: 100%;
+}
+
+.toast{
+  background: var(--color-primary);
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 90%;
+  right: 65%;
+}
+
+.toast-heading{
+  font-size: 3.5rem;
+  font-weight: 700;;
+  display: block;
+  margin: .5rem;
+}
+
