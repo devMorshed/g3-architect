@@ -91,12 +91,33 @@ body{
   column-gap: 1.5rem;
  }
 
+ .nav-items{
+  display: inline-block;
+ }
+
  .nav-link{
   text-decoration: none;
   color: var(--dark-02);
   font-size: 1.2rem;
   font-weight: 500;
  }
+
+ .nav-link:hover{
+  color: var(--dark-01);
+ }
+
+
+.toggle{
+  display: none;
+  font-size: 2rem;
+  color: var(--dark-01);
+  cursor: pointer;
+}
+
+#tgl{
+  display: none;
+}
+
 
  .banner-text{
   text-align: center;
@@ -371,6 +392,7 @@ body{
   }
 
   .section-heading{
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -387,6 +409,50 @@ body{
     width: 80%;
   }
 
+
+
+  /*  -----------------
+      toggle menu style 
+   -----------------   */
+
+  .toggle{
+    display: block;
+    z-index: 5;
+    color: var(--color-primary);
+  }
+
+  .nav-list{
+    position: fixed;
+    height: 100vh;
+    background: rgba(0, 0, 0);
+    width: 100%;
+    top: 0rem;
+    right: -100%;
+    text-align: center;
+    transition: all .5s;
+    padding: 2rem;
+    z-index: 3;
+    border-radius: 5px;
+    flex-direction: column;
+  }
+
+  .nav-item{
+    margin: 1rem auto;
+  }
+
+  .nav-link{
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .nav-link:hover{
+    color: var(--color-primary);
+  }
+
+  #tgl:checked ~.nav-list{
+    right: 0;
+  }
+
   .banner{
     position: absolute;
     top: 50%;
@@ -395,6 +461,10 @@ body{
   }
   .banner-text{
     width: 100%;
+  }
+
+  .banner-heading{
+    font-size: 2.5rem;
   }
 
   .banner-img{
@@ -526,6 +596,9 @@ body{
 }
 
 
+/* ------------------------- 
+      desktop responsive 
+------------------------- */
 
 @media  screen and (min-width:769px) and (max-width:1280px) {
   .header{
