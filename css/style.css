@@ -56,6 +56,7 @@ body{
  ----------------------  */
 .header{
   height: 100vh;
+  position: relative;
   background: rgba(255, 143, 14, 0.1);
 }
 
@@ -90,13 +91,11 @@ body{
  }
 
  .banner-text{
-  /* height: 3vh; */
-  /* background: #13131305; */
   text-align: center;
   width: 40%;
-  margin: 1rem auto;
-  
+  margin: 1rem auto; 
  }
+
  .banner-img{
   height: 60vh;
   overflow: hidden;
@@ -105,8 +104,6 @@ body{
  .banner-img img{
   display: block;
   height: 100%;
-  object-fit: cover;
-  object-position: bottom left;
   margin: 0 auto;
  }
 
@@ -131,10 +128,8 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 5rem
+  column-gap: 5rem;
  }
-
-
 
  .thin-heading{
   font-weight: 500;
@@ -170,7 +165,6 @@ body{
 .love-text{
  width: 50%;
  padding: 1rem;
-
 }
 
 .section-love .section-heading{
@@ -323,7 +317,7 @@ body{
   justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   margin: 2rem auto;
   padding: 3rem;
   filter: grayscale(100%);
@@ -341,9 +335,116 @@ body{
 }
 
 
+@media screen and (max-width: 576px){
 
-@media  screen and (max-width:768px) {
+  html{
+    font-size: 52.5%;
+  }
+
+  .container{
+    width: 90%;
+    overflow: hidden;
+  }
+  .section-heading{
+    text-align: center;
+  }
+
+  .header{
+    height: 50vh;
+  }
+
+  .nav-bar, .banner{
+    width: 80%;
+  }
+
+
+  .banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+  }
+  .banner-text{
+    width: 100%;
+  }
+
+  .banner-img{
+    height: 100%;
+  }
+
+  .banner-img img{
+    width: 100%;
+  }
+  
+
+
+  .section-quick, .section-love{
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .quick-imgbox{
+    padding: 3rem;
+    justify-self: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .love-text{
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .love-imgbox{
+  width: 90%;
+  margin: 3rem auto;
+  }
+
+.info-box{
+  display: block;
+}
+.info-card{
+  width: 80%;
+  margin: 1rem auto;
+}
+
+
   .form-row{
     display: block;
+  }
+
+
+
+
+   .sponsor_box{
+    flex-wrap: wrap;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media  screen and (min-width:577px) and (max-width:768px) {
+  .form-row{
+    display: block;
+  }
+  body{
+    background: rgba(45, 155, 63, 0.356);
+  }
+}
+
+@media  screen and (min-width:769px) and (max-width:1200px) {
+  
+  body{
+    background: rgba(68, 20, 112, 0.295);
   }
 }
