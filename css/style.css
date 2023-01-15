@@ -23,7 +23,8 @@ body{
 
 /* common styles */
 .container{
-  margin: 1rem auto;
+  width: 65%;
+  margin: 5rem auto;
 }
 
 
@@ -44,7 +45,13 @@ body{
   background-color: var(--color-secondary);
 }
 
-/* ----------------------\
+.section-heading{
+  font-size: 3rem;
+  font-weight: 700;
+ }
+
+/* ----------------------
+    header style
  ----------------------  */
 .header{
   height: 100vh;
@@ -58,7 +65,7 @@ body{
   align-items: center;
   width: 65%;
   padding: .5rem 0;
-  margin-top: 0;
+  margin: 0 auto;
  }
 
  .logo{
@@ -66,7 +73,6 @@ body{
   color: var(--dark-01);
   font-weight: 600;
   text-transform: capitalize;
-
  }
 
  .nav-list{
@@ -86,7 +92,8 @@ body{
   /* height: 3vh; */
   /* background: #13131305; */
   text-align: center;
-  width: 50%;
+  width: 40%;
+  margin: 1rem auto;
   
  }
  .banner-img{
@@ -97,6 +104,8 @@ body{
  .banner-img img{
   display: block;
   height: 100%;
+  object-fit: cover;
+  object-position: bottom left;
   margin: 0 auto;
  }
 
@@ -121,15 +130,10 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65%;
-  margin: 8rem auto;
   column-gap: 5rem
  }
 
- .section-heading{
-  font-size: 3rem;
-  font-weight: 700;
- }
+
 
  .thin-heading{
   font-weight: 500;
@@ -147,14 +151,25 @@ body{
  }
 
 
- /* love and enjoy features section   */
+
+
+/* ----------------------
+    love and enjoy features section   
+ ----------------------  */
 
 .section-love{
+  margin: 5rem auto;
   display: flex;
   justify-content: space-between;
-  column-gap: 5rem;
-  width: 65%;
-  margin: 8rem auto;
+  align-items: center;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.love-text{
+ width: 50%;
+ padding: 1rem;
+
 }
 
 .section-love .section-heading{
@@ -164,54 +179,106 @@ body{
   margin-bottom: 1rem;
 }
 
-.love-text{
-  width: 50%;
-}
-.love-imgbox{
-  width: 50%;
-}
-
 .card{
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
-  margin: 1rem auto;
+  margin: .5rem auto;
   border-radius: 5px;
-
 }
 
 .card-heading{
   font-size: 1.2rem;
 }
 
-.card .details{
-  text-overflow: ellipsi;
-}
-
 .love-imgbox{
-  /* overflow: hidden; */
-  position: relative;
+ width: 50%;
+ position: relative;
 }
 
-.love-img{
+.love-imgbox img{
   width: 100%;
+  height: auto;
 }
+
 
 .toast{
   background: var(--color-primary);
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 1rem;
   border: none;
   border-radius: 5px;
   position: absolute;
-  top: 90%;
-  right: 65%;
+  left: -5%;
+  bottom: -5%;
 }
 
 .toast-heading{
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;;
   display: block;
-  margin: .5rem;
+  margin-bottom: .5rem;
 }
 
+
+
+/* 
+    info box style
+*/
+.section-fact{
+  width: 65%;
+}
+
+.info-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 2rem auto;
+
+}
+.info-card{
+  width: 20%;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+}
+.info-count{
+  margin: 1rem;
+}
+.info-details{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.info-card:hover .info-icon{
+  transition: .3s;
+  transform: scale(1.2) rotate(360deg);
+}
+
+
+.section_sponsor{
+  text-align: center;
+}
+
+.sponsor_box{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: no-wrap;
+  margin: 2rem auto;
+  padding: 3rem;
+  filter: grayscale(100%);
+}
+
+
+
+/* footer */
+
+.footer{
+  background: #FFF4E7;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+}
